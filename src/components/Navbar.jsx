@@ -2,18 +2,18 @@ import { Link } from "react-router-dom";
 import userIcon from "../assets/user.png";
 const Navbar = () => {
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex items-center justify-between">
       <div className=""></div>
-      <div className="nav space-x-5">
+      <div className="space-x-5 nav">
         <Link to="/">Home</Link>
         <Link to="/career">Career</Link>
         <Link to="/about">About</Link>
       </div>
-      <div className="login flex gap-2 items-center">
-        <div className=" ">
+      <div className="flex items-center gap-2 login">
+        <div className="">
           <img src={userIcon} alt="" />
         </div>
-        <button className="btn btn-neutral rounded-none">Login</button>
+        <Link to="/auth/login" className="rounded-none btn btn-neutral">Login</Link>
       </div>
     </div>
   );
